@@ -1,0 +1,25 @@
+<p>Just as you can also use the <code>if</code> keyword inside of lists (to add elements conditionally), you can also use the <code>for</code> keyword to add multiple items into a list:</p><pre class="prettyprint linenums">final numbers =&nbsp;[5, 6];
+final myList = [
+  1,
+  2,
+  for (final num in numbers)
+    num
+];</pre><p>In this example, the numbers <code>5</code> and <code>6</code> will be added to <code>myList</code> (hence <code>myList</code> thereafter is <code>[1, 2, 5, 6]</code>).</p><p>This <code>for ... in</code> syntax is a special variation of the for loop that loops through multiple items in a list. You will see it again later in the course - both outside and inside of a list.&nbsp;It will also be explained again later.</p><p>The idea behind this loop is to simplify the process of performing some operation on all items in a list.</p><p>When used in a list, it's essentially an alternative to the spread operator (<code>...</code>):</p><pre class="prettyprint linenums">final numbers =&nbsp;[5, 6];
+final myList = [
+  1,
+  2,
+  ...numbers
+];</pre><p>It can be useful in scenarios where values must be transformed before being added to a list - the <code>for ... in</code> loop can then be used instead of <code>map()</code> + spread operator:</p><pre class="prettyprint linenums">final numbers =&nbsp;[5, 6];
+final myList = [
+  1,
+  2,
+  ...numbers.map((n) {
+    return n *&nbsp;2; 
+  })&nbsp;//&nbsp;adds 10 and 12
+];</pre><p>can be replaced with:</p><pre class="prettyprint linenums">final numbers =&nbsp;[5, 6];
+final myList = [
+  1,
+  2,
+  for (final num in numbers)
+    num * 2 // adds 10 and 12
+];</pre><p>As mentioned, you will learn more about <code>for</code> later in the course.</p><p>You can also learn more about <code>for ... in</code> inside of lists here: <a href="https://github.com/dart-lang/language/blob/master/accepted/2.3/control-flow-collections/feature-specification.md#repetition" rel="noopener noreferrer" target="_blank">https://github.com/dart-lang/language/blob/master/accepted/2.3/control-flow-collections/feature-specification.md#repetition</a></p>

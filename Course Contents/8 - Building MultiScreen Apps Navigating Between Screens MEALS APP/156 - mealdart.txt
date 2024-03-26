@@ -1,0 +1,1 @@
+https://github.com/academind/flutter-complete-guide-course-resources/blob/main/Code%20Snapshots/08%20Navigation/05%20Loading%20Meals%20Data/lib/models/meal.dart
